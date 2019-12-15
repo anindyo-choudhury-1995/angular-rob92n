@@ -1,0 +1,158 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+ html, body {
+	 height: 100vh;
+	 overflow: scroll;
+}
+ .mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label, .mat-accent .mat-slider-track-fill {
+	 background-color: #bf4230;
+}
+ .mat-toolbar.mat-primary {
+	 background: #bf4230;
+	 color: #fff;
+}
+ .mat-input-element {
+	 caret-color: #bf4230;
+}
+ .mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
+	 background-color: #bf4230;
+}
+ .mat-calendar-body-selected {
+	 background-color: #bf4230;
+	 color: #fff;
+}
+ .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+	 color: #bf4230;
+}
+ body {
+	 margin: 0;
+	 font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+ .position-absolute {
+	 position: absolute !important;
+}
+ .height-48-px {
+	 height: 48px !important;
+}
+ .width-auto {
+	 width: auto !important;
+}
+ .width-48-px {
+	 width: 48px !important;
+}
+ a {
+	 text-decoration: none !important;
+}
+ .display-flex {
+	 display: flex !important;
+}
+ .flex-direction-row {
+	 flex-direction: row;
+}
+ .flex-direction-column {
+	 flex-direction: column;
+}
+ .flex-wrap-wrap {
+	 flex-wrap: wrap !important;
+}
+ .justify-content-space-around {
+	 justify-content: space-around !important;
+}
+ .justify-content-space-between {
+	 justify-content: space-between !important;
+}
+ .align-items-center {
+	 align-items: center !important;
+}
+ .right-m {
+	 right: 16px !important;
+}
+ .bottom-m {
+	 bottom: 16px !important;
+}
+ .font-size-xxxl {
+	 font-size: 48px !important;
+}
+ .padding-remove {
+	 padding: 0px !important;
+}
+ .padding-xs {
+	 padding: 4px !important;
+}
+ .padding-s {
+	 padding: 8px !important;
+}
+ .padding-m {
+	 padding: 16px !important;
+}
+ .padding-l {
+	 padding: 24px !important;
+}
+ .padding-xl {
+	 padding: 32px !important;
+}
+ .padding-top-xs {
+	 padding-top: 4px !important;
+}
+ .padding-top-s {
+	 padding-top: 8px !important;
+}
+ .padding-top-m {
+	 padding-top: 16px !important;
+}
+ .padding-top-l {
+	 padding-top: 24px !important;
+}
+ .padding-top-xl {
+	 padding-top: 32px !important;
+}
+ .padding-bottom-xs {
+	 padding-bottom: 4px !important;
+}
+ .padding-bottom-s {
+	 padding-bottom: 8px !important;
+}
+ .padding-bottom-m {
+	 padding-bottom: 16px !important;
+}
+ .padding-bottom-l {
+	 padding-bottom: 24px !important;
+}
+ .padding-bottom-xl {
+	 padding-bottom: 32px !important;
+}
+ .margin-xs {
+	 margin: 4px !important;
+}
+ .margin-s {
+	 margin: 8px !important;
+}
+ .margin-m {
+	 margin: 16px !important;
+}
+ .margin-l {
+	 margin: 24px !important;
+}
+ .margin-xl {
+	 margin: 32px !important;
+}
+ .margin-top-xs {
+	 margin-top: 4px !important;
+}
+ .margin-top-s {
+	 margin-top: 8px !important;
+}
+ .margin-top-m {
+	 margin-top: 16px !important;
+}
+ .margin-top-l {
+	 margin-top: 24px !important;
+}
+ .margin-top-xl {
+	 margin-top: 32px !important;
+}
+ .text-align-center {
+	 text-align: center !important;
+}
+ 

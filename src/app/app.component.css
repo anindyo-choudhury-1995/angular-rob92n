@@ -1,0 +1,27 @@
+.oracle-header-color {
+    background: #bf4230;
+}
+
+.width-150-px {
+    width: 150px !important;
+}
+
+.margin-left-2-px {
+    margin-left: 2px;
+}
+
+.margin-top-neg-12-px {
+    margin-top: -12px;
+}
+
+.example-icon {
+    padding: 0 14px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.width-300-px {
+    width: 300px;
+}

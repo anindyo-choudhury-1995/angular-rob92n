@@ -1,0 +1,214 @@
+<!-- <app-top-bar></app-top-bar> -->
+<div class="oracle-header-color">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAABBCAQAAADbcOZpAAAFt0lEQVR42u3Zf2zV1RnH8W9Lf9hWIuhkgCsgQ6gENsaczAQXxqbxxyZinIbFbMsmjgw2wGgNCmJX4xibf2i2zBlw8w/ZWgbj17CZ2zDCkgbLtlrQzI6WIkwQ1wlUWvrjvvbPdze9t+3tnULJknM+/93znOc8531vzvM850aioPOpgCAADoCDAuAAOAAOCoAD4AA4KAAOgIMC4AA4AA4KgAPgADgoAA6AA+CAIAAOgIMC4P9LwHmut0qV3/VRjU2eMEdR0rbA3bb4kx39WO+0zdNukj/APsWWqLPL3AEjKTRHpWo77ezje7cbRVbYZZc7szjVMNOU2+DFfnxt86jIDD/1YzPPN+Bb1eqUefzF7QpiSI95L6Ntwg6T+9mnyGL/RkKz2f1G8kW1ugf0+2eT5doKVg16qk+qzhBjs7kKVNiuSvn5BVyhLbltj+409STn2jziEpEiK7Ui0ce2W7dEbL3H6D47TdcUz3b6tY+lzeZb7v0BI6HVDSJFtoCHMp4p1+0aB/SV8K5HRUb6vvWezuLL+hCAl8SHOqrSbFNdnaIyk8y02kHQaql8+VZ6DzU+Z0zaiik+ba1OnLEmbafLbUXC+7rQYXna/EJnwDGVZitTluJ5uivkiRRnBXiO/eC0533eVaak+JpqkjyRfNf4gcdde/4AT9YK/miynAx2ZbbpRoMZIg87iV+Z2K/tRVaBVxSm3L7f04ZWX/WUbhzyhV7zs+zXgz2mZIwkG8ATbAZ/d9uFTnI/1ImjJmY8VCRyjTp0eEixZU6hyqQBbG+SwD5X9PrsE95Cu2eUGGsvum1UmpxfoQMHfEpuxjiyATxPM1rcceGriDo9KDc8i4z8iFZU+ahFGQHnWAJqe3kdbQd401SRAt90HF0ejudLVemW8KSSQeIYHPAIFdqxz7dcb755/Wi+G+QNBeC3wdysNrtTC2qUutdJVJkoxwhFvVRopEWOo9NPkitLLHMWrRYk64n1SGjxJZHINC9LeNvX4krlwwAea53BRpufD80v+ASYkxXgOxxKAbzBKJ+1T5tDsZo1eTc+wl9NSa6c6R20W2dEMstPV4uErUpFpntFwj8tOCeA1w+Ct8fLhg0N4AY9WKg4C9ulTmCzMb4dXxETRW6N83XqqDcnua5UDfiH8SmtzTe8g4TH5Bpvs24dKgaNZHDAl1mjC/VWu0+5B9JU7jtmDNUd/Kwu/M3YQS2v9gf0qDTc0pQ7eFoMkE6NdnvJd13e63q4XwLHLPaE39ioWrVqG2x3DLT4skiFs6jtlfY+KOBcd3sLb2boF4csyX0mroJ/YVRGu1Ge1Y6DZomsiO/gSckU9rMY8Q5laSuv1YoOzymKC7W+Y6eLXecwqHZJVoAfyGAzyYtx5zfrwr9FrNUB9rrHeBfJS1GuPJe6yx7daPe44YZZmQY4UujBuE14w80pFelLoNHHRUZ6QY+ErqT+2ydWijyoPb697zFGflokefLki5T4Lagw3HAj++hSFyuxIO4Zm5Qbp0BuP94K/9c64oMBzvF8jJhTDmtOUZMWJ5Pt7zPGxK3yyX7KtK9oASfcn7weysFxX4/3KlbqShNijTPGUxI4bJ5cP4ojSTitJS2SZs1OWaw4fmE47Xg/OqZVm+eMdpd/xb7OOKopzdMhzbYM+CR1zh97ljqShDjQOG5ZXNcWW+0UNvV50LnO3jhLb3CZyI3OotMLAx4lxxS/l8Bu4+VY5EiGGOpNE9k0SKRN5okMc4u6DFZHsnqPO2fPlaMtVOVVr/XRAfW2W9wr+RS6V4PD1hrXx89V1mnyukZPmmCNgxrVuDLj3vPVadRguUKRj7jPRvvs7xPHG24Ridysxuv9RPqaeo3qLU82KyVu80t7HdCQYtfgVRXhwT38oxEABwXAAXBQABwAB8BBAXAAHAAHBcABcAAcFAAHwEEBcAAcAAcFwAFwABwUAAfAQQHwEOk/9TDRNIKdAnsAAAAASUVORK5CYII=" />
+</div>
+<ng-container *ngIf="stage === 0 || stage === -1 || stage === 3">
+    <!-- <app-date-entry></app-date-entry> -->
+    <div class="display-flex justify-content-space-around align-items-center margin-m">
+        <mat-form-field style="width: 180px;">
+            <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Choose a date"
+                [(ngModel)]="newDate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <span>07-DEC-19 - 13-DEC-19</span>
+    </div>
+
+    <!-- <app-hour-display></app-hour-display> -->
+    <div class="display-flex justify-content-space-around flex-wrap-wrap padding-s margin-m"
+        style="border: 1px solid #c5c5c5;-webkit-border:1px solid  #c5c5c5 ;-moz-border:1px solid  #c5c5c5;">
+        <span class="width-150-px padding-s"><b>Service</b>: 10</span>
+        <span class="width-150-px padding-s"><b>Non Service</b>: 10</span>
+        <span class="width-150-px padding-s"><b>Time Off</b>: 10</span>
+        <span class="width-150-px padding-s"><b>Total Hours</b>: 10</span>
+    </div>
+    <!-- <app-day-tracker></app-day-tracker> -->
+    <div class="padding-top-m padding-bottom-m display-flex justify-content-space-around margin-m">
+        <div *ngFor="let dayTracker of dayTrackers">
+            <div class="text-align-center padding-bottom-s">
+                {{ dayTracker.time }}
+            </div>
+            <div>
+                <button (click)="changeListItems(dayTracker.id)"  mat-mini-fab [disabled]="dayTracker.selected" (click)="selectDayById(dayTracker.id)"
+                    color="primary">{{ dayTracker.day }}</button>
+            </div>
+        </div>
+    </div>
+    <!-- <app-list-component (click)="takeToStage(1)"></app-list-component> -->
+    <mat-list>
+        <a>
+            <mat-list-item (click)="takeToStage(1,i)" class="mat-card margin-m width-auto"
+                *ngFor="let listItem of listItems, let i = index">
+                <mat-icon mat-list-icon>note</mat-icon>
+                <span mat-line class="display-flex justify-content-space-between align-items-center">
+                    <span>
+                        <div><b>{{listItem.srNumber | limitTo:30}}</b></div>
+                        <span> {{listItem.taskType | limitTo:15}}</span> <span
+                            *ngIf="listItem.taskType !== '' && listItem.deliveryType !== '' "> | </span>
+                        <span>{{listItem.deliveryType | limitTo:15}} </span>
+                    </span>
+                    <span> {{listItem.time}} </span>
+                </span>
+            </mat-list-item>
+        </a>
+    </mat-list>
+    <!-- <app-add-request (click)="takeToStage(1)"></app-add-request> -->
+    <button (click)="takeToStage(2,-1)" mat-fab class="position-absolute bottom-m right-m" color="primary">
+        <mat-icon class="font-size-xxxl height-48-px width-48-px margin-left-2-px margin-top-neg-12-px">add</mat-icon>
+    </button>
+</ng-container>
+<ng-container *ngIf="stage === 1 || stage === 2">
+    <!-- <app-secondary-top-bar (click)="takeToStage(0)"></app-secondary-top-bar> -->
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example back icon" (click)="takeToStage(0)">
+                arrow_back</mat-icon>
+            <span>12-DEC-19</span>
+            <span class="example-spacer"></span>
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon"
+                (click)="takeToStage(-1)">delete</mat-icon>
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example save icon" (click)="takeToStage(3)">
+                save</mat-icon>
+
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <ng-container *ngIf="stage === 1">
+        <!-- <app-new-request></app-new-request> -->
+        <div
+            class="margin-m padding-m mat-card display-flex jutify-content-center align-items-center flex-direction-column flex-wrap-wrap">
+            <mat-form-field class="width-300-px">
+                <mat-label>SR Number</mat-label>
+                <mat-select disabled [(value)]="selectedSRNumber">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let sRNumber of sRNumbers" [value]="sRNumber.value">
+                        {{sRNumber.value}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+            <mat-form-field class="width-300-px">
+                <mat-label>Task Type</mat-label>
+                <mat-select [(value)]="selectedTaskType">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let taskType of taskTypes" [value]="taskType.value">
+                        {{taskType.value}}
+                    </mat-option>
+                    <mat-option *ngIf="selectedSRNumber === 'Non Service'" value="Time Off">
+                        Time Off
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+
+            <mat-form-field class="width-300-px">
+                <mat-label>Delivery Type</mat-label>
+                <mat-select [disabled]="selectedTaskType === 'Time Off'" [(value)]="selectedDeliveryType">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let deliveryType of deliveryTypes" [value]="deliveryType.value">
+                        {{deliveryType.value}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+            <div class="width-300-px">
+                <div style="width:100%" class="display-flex justify-content-space-between align-items-center">
+                    <div class="display-flex align-items-center">
+                        <mat-icon>access_time</mat-icon><span> Time</span>
+                    </div>
+                    <div>{{timeValue}}</div>
+                </div>
+                <div style="width:100%">
+                    <mat-slider style="width:100%" class="example-margin" [max]="24" [min]="0" [step]=".25"
+                        [thumbLabel]="true" [(ngModel)]="timeValue">
+                    </mat-slider>
+                </div>
+            </div>
+
+            <div class="width-300-px">
+                <mat-form-field style="width:100%" class="example-form-field">
+                    <textarea matInput type="text" cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+                        cdkAutosizeMinRows="10" cdkAutosizeMaxRows="10" placeholder="Note"
+                        [(ngModel)]="noteValue"></textarea>
+                    <button mat-button *ngIf="noteValue" matSuffix mat-icon-button aria-label="Clear"
+                        (click)="noteValue=''">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="stage === 2">
+        <!-- <app-new-request></app-new-request> -->
+        <div
+            class="margin-m padding-m mat-card display-flex jutify-content-center align-items-center flex-direction-column flex-wrap-wrap">
+            <mat-form-field class="width-300-px">
+                <mat-label>SR Number</mat-label>
+                <mat-select [(value)]="selectedSRNumber">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let sRNumber of sRNumbers" [value]="sRNumber.value">
+                        {{sRNumber.value}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+            <mat-form-field class="width-300-px">
+                <mat-label>Task Type</mat-label>
+                <mat-select [(value)]="selectedTaskType">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let taskType of taskTypes" [value]="taskType.value">
+                        {{taskType.value}}
+                    </mat-option>
+                    <mat-option *ngIf="selectedSRNumber === 'Non Service'" value="timeOff">
+                        Time Off
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+
+            <mat-form-field class="width-300-px">
+                <mat-label>Delivery Type</mat-label>
+                <mat-select [disabled]="selectedTaskType === 'Time Off'" [(value)]="selectedDeliveryType">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let deliveryType of deliveryTypes" [value]="deliveryType.value">
+                        {{deliveryType.value}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+            <div class="width-300-px">
+                <div style="width:100%" class="display-flex justify-content-space-between align-items-center">
+                    <div class="display-flex align-items-center">
+                        <mat-icon>access_time</mat-icon><span> Time</span>
+                    </div>
+                    <div>{{timeValue}}</div>
+                </div>
+                <div style="width:100%">
+                    <mat-slider style="width:100%" class="example-margin" [max]="24" [min]="0" [step]=".25"
+                        [thumbLabel]="true" [(ngModel)]="timeValue">
+                    </mat-slider>
+                </div>
+            </div>
+
+            <div class="width-300-px">
+                <mat-form-field style="width:100%" class="example-form-field">
+                    <textarea matInput type="text" cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+                        cdkAutosizeMinRows="10" cdkAutosizeMaxRows="10" placeholder="Note"
+                        [(ngModel)]="noteValue"></textarea>
+                    <button mat-button *ngIf="noteValue" matSuffix mat-icon-button aria-label="Clear"
+                        (click)="noteValue=''">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+        </div>
+    </ng-container>
+</ng-container>
+
+
+<!-- <router-outlet></router-outlet> -->
